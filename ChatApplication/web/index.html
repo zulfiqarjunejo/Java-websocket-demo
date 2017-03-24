@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #b1cbe2">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Chat Application</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+        </nav>
+
+        <section class="container">
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="card-title">Chat</h4>
+                </div>
+                <ul class="list-group list-group-flush list-group-messages">
+                </ul>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Message</span>
+                        <input id="input_message" type="text" class="form-control" placeholder="Hi..." aria-describedby="basic-addon1">
+                        <button id="btn_send_message" type="button" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div><!-- .card ends here -->
+        </section>
+
+        <script type="text/x-handlebars-template" id="template_message">
+            <li class="list-group-item">
+                {{text}}
+            </li>
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+        <script src="ui.js"></script>
+        <script src="websocket.js"></script>
+    </body>
+</html>
